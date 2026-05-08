@@ -10,6 +10,6 @@ RUN npm run build -- --configuration production
 FROM nginx:stable-alpine
 COPY --from=build /app/dist/web-angular/browser /usr/share/nginx/html
 # Configuración personalizada de Nginx para Angular (SPA routing)
-COPY apps/web-angular/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
