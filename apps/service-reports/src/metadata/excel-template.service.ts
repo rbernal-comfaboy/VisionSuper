@@ -19,20 +19,18 @@ export class ExcelTemplateService {
         fgColor: { argb: '1A237E' }
       };
       cell.note = `Tipo: ${col.type}\nObligatorio: ${col.required ? 'SÍ' : 'NO'}`;
-    });
 
-    // Corregir acceso a validación de datos (individual por celda o rango)
-    for (let i = 1; i <= columns.length; i++) {
-      const colLetter = worksheet.getColumn(i).letter;
-      worksheet.dataValidation(`${colLetter}2:${colLetter}1000`, {
+      // Aplicar validación directamente a la columna
+      const column = worksheet.getColumn(index + 1);
+      column.dataValidation = {
         type: 'whole',
         operator: 'between',
         allowBlank: true,
         showErrorMessage: true,
         errorTitle: 'Error de Formato',
         error: 'El valor ingresado no cumple con la restricción del campo.'
-      });
-    }
+      };
+    });
 
     const buffer = await workbook.xlsx.writeBuffer();
     return Buffer.from(buffer);
