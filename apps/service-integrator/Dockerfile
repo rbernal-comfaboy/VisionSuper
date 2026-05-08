@@ -1,5 +1,6 @@
 # Etapa de construcción
 FROM node:20-alpine as build
+RUN npm install -g npm@latest
 WORKDIR /app
 COPY apps/service-integrator/package*.json ./
 RUN npm install

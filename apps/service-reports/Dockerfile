@@ -1,5 +1,6 @@
 # Etapa de construcción
 FROM node:20-alpine as build
+RUN npm install -g npm@latest
 # Instalación de dependencias para libxmljs2 si fuera necesario compilación nativa
 RUN apk add --no-cache python3 make g++ 
 WORKDIR /app

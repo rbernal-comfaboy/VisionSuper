@@ -1,5 +1,6 @@
 # Etapa 1: Construcción
 FROM node:20-alpine as build
+RUN npm install -g npm@latest
 WORKDIR /app
 COPY apps/web-angular/package*.json ./
 RUN npm install
