@@ -1,0 +1,40 @@
+<div class="login-container">
+  <div class="glass-card">
+    <div class="logo-section">
+      <img src="assets/logo_comfaboy.png" alt="COMFABOY" class="logo">
+      <h1 class="title">VisionSUPER</h1>
+      <p class="subtitle">Plataforma de Reporte Normativo SSSF</p>
+    </div>
+
+    <form class="login-form">
+      <button mat-flat-button class="google-btn" (click)="loginWithGoogle()">
+        <img src="assets/google_icon.svg" alt="Google" class="btn-icon">
+        Ingresar con Google Workspace
+      </button>
+
+      <div class="divider">
+        <span>O</span>
+      </div>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Usuario Institucional</mat-label>
+        <input matInput placeholder="usuario@comfaboy.com.co">
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" placeholder="********">
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="submit-btn" (click)="loginWithPassword()">
+        Iniciar Sesión
+      </button>
+    </form>
+
+    <div class="footer">
+      <p>&copy; 2026 COMFABOY - Tecnología y Cumplimiento</p>
+    </div>
+  </div>
+</div>

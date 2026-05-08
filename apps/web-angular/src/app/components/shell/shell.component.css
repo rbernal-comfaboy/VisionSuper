@@ -1,0 +1,86 @@
+.shell-container {
+  height: 100vh;
+  width: 100vw;
+  background: #f4f7fa;
+}
+
+.shell-sidenav {
+  width: 260px;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  box-shadow: 4px 0 24px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo-container {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.logo {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.app-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  color: #1a237e;
+  margin: 0;
+}
+
+.shell-toolbar {
+  background: transparent;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.main-viewport {
+  padding: 24px;
+  background: #f4f7fa;
+  min-height: calc(100vh - 64px);
+}
+
+.active-link {
+  background: rgba(26, 35, 126, 0.1);
+  color: #1a237e;
+  border-left: 4px solid #1a237e;
+}
+
+.sidenav-footer {
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.user-role {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.avatar {
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+  color: #1a237e;
+}

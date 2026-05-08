@@ -1,71 +1,49 @@
 # VisionSUPER: Documento Maestro de Arquitectura y Requerimientos
 
-Este documento es la **Única Fuente de Verdad** para el sistema VisionSUPER de **COMFABOY**. Centraliza requerimientos de negocio, diseño técnico y estrategias de despliegue.
+Este documento es la **Única Fuente de Verdad** para el sistema VisionSUPER de **COMFABOY**. 
 
 ---
 
 ## 1. Introducción y Objetivos
-VisionSUPER es la plataforma de cumplimiento normativo diseñada para centralizar la extracción, validación, aprobación y entrega de información a la **Superintendencia de Subsidio Familiar (SSSF)** (Circular 2025-00008).
+VisionSUPER centraliza la extracción, consolidación y entrega de información a la **SSSF** (Circular 2025-00008).
 
-### Objetivos Principales:
-*   **Centralización**: Consolidar datos de múltiples fuentes (**Informix, SQL Server, MySQL, Postgres, Excel**).
-*   **Automatización**: Generación de archivos XML firmados digitalmente (XSD oficial) y reportes en Excel.
-*   **Calidad**: Validación estructural y de negocio en tiempo real.
-*   **Control**: Trazabilidad completa de cada acción y flujo de aprobación por niveles.
-
----
-
-## 2. Arquitectura del Sistema (Monorepo)
-
-El sistema utiliza una arquitectura de microservicios y BaaS (Backend as a Service) auto-alojado:
-
-*   **`web-angular`**: Interfaz de usuario en Angular 17+ con Angular Material. Dashboard de cumplimiento con semáforos de periodicidad.
-*   **`service-integrator`**: Ingesta de datos heterogéneos. Conecta a Informix (VPN) y procesa Excels masivos.
-*   **`service-reports`**: Motor de validación XSD, lógica de negocio y generación de XML firmados (estándar XAdES).
-*   **`api-gateway`**: Punto de entrada único vía Nginx para ruteo y terminación SSL.
-*   **`Supabase (Self-Hosted)`**: 
-    *   **PostgreSQL**: Staging de datos y logs de auditoría.
-    *   **GoTrue**: Autenticación restringida a dominio **@comfaboy.com.co** vía Google OAuth.
-    *   **Storage**: Repositorio de XMLs finales y anexos PDF.
+### Objetivos Clave (Refinados):
+*   **Consolidación Híbrida**: Integración de datos desde aplicaciones (Informix, SQL) y cargas manuales de Excels de unidades de negocio.
+*   **Reportes Espejo**: Generación simultánea en XML, XLSX y CSV para facilitar la validación humana.
+*   **Workflow Dinámico**: Motor de aprobación basado en plantillas personalizables por capítulo.
+*   **Gestión Dinámica de Reportes**: Motor basado en metadatos XSD para manejar +150 estructuras y cambios en la circular sin re-programación.
+*   **Interoperabilidad SIMON**: Protocolos de nomenclatura, redondeo normativo y gestión de radicados para la SSSF.
+*   **Firma Digital (Opcional)**: Soporte legal mediante firmas electrónicas XAdES.
 
 ---
 
-## 3. Modelo de Datos y Staging
+## 2. Arquitectura de Negocio (El Proceso)
 
-VisionSUPER desacopla las fuentes de producción mediante un área de **Staging** flexible:
-
-1.  **Tablas Core**: Gestión de capítulos (II al VIII), usuarios, roles y fuentes de datos configurables.
-2.  **Staging Items**: Almacenamiento en `JSONB` para los datos extraídos antes de ser validados.
-3.  **Auditoría Detallada**: Registro inalterable de quién, qué y cuándo se modificó la información (Cumplimiento SSSF 3.1).
-
----
-
-## 4. Estrategia de Integración (Extract-Map-Load)
-
-*   **Patrón Adaptador**: Conectores agnósticos para diferentes motores de DB.
-*   **Mapeador Dinámico**: Interfaz para vincular columnas de origen con campos de la circular sin programar.
-*   **Validación Cruzada**: Verificación de consistencia entre capítulos (ej. aportes en Cap II vs balance en Cap III).
+1.  **Ingesta Híbrida**: 
+    *   `service-integrator` extrae de bases de datos centralizadas (Informix/SQL).
+    *   Usuarios de Unidades de Negocio suben archivos Excel con su información específica.
+    *   **Conciliación**: El sistema aplica reglas de prevalencia (Manual sobre Automático) para permitir ajustes humanos.
+2.  **Consolidación**: El sistema une las piezas en el área de **Staging**, garantizando trazabilidad por origen.
+3.  **Verificación**: Los revisores descargan el espejo en **XLSX** para validar contra sus fuentes locales.
+4.  **Aprobación**: Flujo multinivel con notificaciones automáticas por email.
+5.  **Cierre**: Firma digital del **XML** y descarga para reporte en SIMON.
 
 ---
 
-## 5. Flujo de Trabajo (Workflow)
+## 3. Componentes Técnicos (Monorepo)
 
-1.  **Preparador**: Carga datos, corrige errores de validación.
-2.  **Revisor**: Auditoría por Contaduría / Revisoría Fiscal.
-3.  **Aprobador**: Firma final del Director Administrativo.
-4.  **Entrega**: Disponibilidad del XML para cargue en portal SIMON.
-
----
-
-## 6. Infraestructura y Seguridad
-
-*   **Despliegue**: Docker Compose en Ubuntu Server (4-8 Cores, 8-16 GB RAM).
-*   **Diseño Responsivo (Mobile-First)**: La interfaz está optimizada para dispositivos móviles y tablets, permitiendo a los Directores revisar y aprobar reportes desde cualquier lugar.
-*   **Seguridad**: 
-    *   Row Level Security (RLS) en Postgres.
-    *   Cifrado AES-256 para credenciales de bases de datos externas.
-    *   VPN (WireGuard/Tailscale) para acceso administrativo.
-    *   SSL obligatorio en puerto 443.
+*   **`web-angular`**: Portal responsivo para carga de archivos, dashboard de semáforos y consola de aprobación móvil.
+*   **`service-integrator`**: Microservicio de conectores (SQL, Informix) y procesador de Excels masivos.
+*   **`service-reports`**: Motor de validación XSD, transcodificador de formatos (XML/XLSX/CSV) y módulo de firma digital.
+*   **`Supabase`**: Base de datos de staging, bóveda de credenciales cifradas y motor de autenticación Google.
 
 ---
-*Documento actualizado y unificado el 2026-05-08.*
+
+## 4. Estrategia de Seguridad y Auditoría
+
+*   **Trazabilidad**: Auditoría inalterable de cada paso del workflow.
+*   **Firma Digital**: Integración de estándares XAdES para el XML final.
+*   **Responsividad**: Aplicación accesible en móviles para aprobadores de alto nivel.
+
+---
+*Actualizado y Unificado el 2026-05-08.*

@@ -1,0 +1,39 @@
+<mat-sidenav-container class="shell-container" autosize>
+  <mat-sidenav #sidenav mode="side" opened class="shell-sidenav glass">
+    <div class="logo-container">
+      <img src="assets/logo_comfaboy.png" alt="COMFABOY" class="logo">
+      <h1 class="app-title">VisionSUPER</h1>
+    </div>
+    
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let item of navItems$ | async" [routerLink]="item.route" routerLinkActive="active-link">
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+        <span matListItemTitle>{{item.label}}</span>
+      </a>
+    </mat-nav-list>
+
+    <div class="sidenav-footer">
+      <p class="user-role">{{ (userProfile$ | async)?.rol }}</p>
+      <button mat-button color="warn" (click)="onLogout()">
+        <mat-icon>logout</mat-icon> Salir
+      </button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="shell-content">
+    <mat-toolbar class="shell-toolbar">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="spacer"></span>
+      <div class="user-info">
+        <span>{{ (userProfile$ | async)?.nombre_completo }}</span>
+        <mat-icon class="avatar">account_circle</mat-icon>
+      </div>
+    </mat-toolbar>
+
+    <main class="main-viewport">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

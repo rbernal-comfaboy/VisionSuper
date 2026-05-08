@@ -21,8 +21,11 @@ Utilizaremos los estándares de Angular Material / Flex Layout:
 ### 3.2. Dashboard de Cumplimiento
 *   **Desktop**: Malla de 3 o 4 columnas con indicadores de estado.
 *   **Móvil**: Lista vertical (stack) con indicadores tipo "Badge" simplificados.
+*   **Semáforos**: Uso de colores semánticos (Mat-Success, Mat-Warn, Mat-Error) para estados de reporte.
 
-### 3.3. Formularios de los Capítulos
+### 3.3. Acciones de Aprobación
+*   Botones de acción fija (Fab o Bottom Sheet) en móvil para Aprobar/Rechazar.
+*   Confirmaciones modales claras para procesos de Firma Digital.
 *   Uso de **Steppers** verticales en móvil para evitar el scroll infinito en formularios con muchos campos.
 *   Inputs optimizados para teclado móvil (numéricos para valores de salarios, selectores de fecha nativos).
 

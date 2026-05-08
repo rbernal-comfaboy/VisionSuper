@@ -1,0 +1,99 @@
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+  font-family: 'Outfit', sans-serif;
+}
+
+.glass-card {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.logo-section {
+  margin-bottom: 30px;
+}
+
+.logo {
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin: 0;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.google-btn {
+  background: #fff;
+  color: #555;
+  border: 1px solid #ddd !important;
+  height: 48px;
+  font-weight: 500;
+}
+
+.btn-icon {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #999;
+  margin: 10px 0;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #eee;
+}
+
+.divider span {
+  padding: 0 10px;
+  font-size: 0.8rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.submit-btn {
+  height: 50px;
+  background: #1a237e !important;
+  color: white !important;
+  font-size: 1rem;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 0.75rem;
+  color: #888;
+}

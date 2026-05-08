@@ -1,0 +1,52 @@
+<div class="mapper-container">
+  <div class="header">
+    <div class="title-section">
+      <h1>Mapeador de Datos Inteligente</h1>
+      <p>Vincula tu fuente <strong>Informix_Produccion</strong> con el reporte <strong>2-001A</strong></p>
+    </div>
+    <div class="actions">
+      <button mat-stroked-button (click)="testMapping()">
+        <mat-icon>play_circle</mat-icon> Probar Mapeo
+      </button>
+      <button mat-raised-button color="primary" (click)="saveMapping()">
+        Guardar Configuración
+      </button>
+    </div>
+  </div>
+
+  <div class="mapper-grid">
+    <!-- Columna Fuente (DB) -->
+    <div class="column source-column">
+      <h3>Campos de la Fuente (Informix)</h3>
+      <div class="field-list">
+        <div class="field-item draggable" *ngFor="let field of sourceFields">
+          <mat-icon>drag_indicator</mat-icon>
+          <span>{{field.name}}</span>
+          <small>{{field.sampleValue}}</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conectores (Visual) -->
+    <div class="visual-connectors">
+      <mat-icon>sync_alt</mat-icon>
+    </div>
+
+    <!-- Columna Destino (XSD) -->
+    <div class="column target-column">
+      <h3>Estructura Normativa (XSD)</h3>
+      <div class="field-list">
+        <div class="target-item" *ngFor="let field of targetFields">
+          <div class="target-label">
+            <span class="required" *ngIf="field.required">*</span>
+            {{field.label}}
+          </div>
+          <div class="drop-zone" [ngClass]="{'filled': field.mappedTo}">
+            {{ field.mappedTo || 'Arrastra un campo aquí' }}
+            <mat-icon *ngIf="field.mappedTo" class="clear-icon">close</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

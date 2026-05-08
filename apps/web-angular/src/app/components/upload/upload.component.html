@@ -1,0 +1,54 @@
+<div class="upload-container">
+  <mat-card class="upload-card glass">
+    <mat-card-header>
+      <mat-card-title>Carga de Información - Unidades de Negocio</mat-card-title>
+      <mat-card-subtitle>Selecciona el capítulo y sube tu archivo Excel</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="selectors">
+        <mat-form-field appearance="outline">
+          <mat-label>Unidad de Negocio</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let unit of units" [value]="unit.id">{{unit.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Capítulo / Reporte</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let chapter of chapters" [value]="chapter.id">{{chapter.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="drop-zone" 
+           [class.dragging]="isDragging"
+           (dragover)="onDragOver($event)"
+           (dragleave)="onDragLeave()"
+           (drop)="onDrop($event)"
+           (click)="fileInput.click()">
+        
+        <mat-icon class="upload-icon">cloud_upload</mat-icon>
+        <p>Arrastra tu archivo Excel aquí o haz clic para buscar</p>
+        <input type="file" #fileInput (change)="onFileSelected($event)" hidden accept=".xlsx, .csv">
+      </div>
+
+      <div *ngIf="isUploading" class="progress-section">
+        <p>Procesando archivo...</p>
+        <mat-progress-bar mode="determinate" [value]="uploadProgress"></mat-progress-bar>
+      </div>
+
+      <div *ngIf="rowsProcessed > 0 && !isUploading" class="success-section">
+        <mat-icon color="primary">check_circle</mat-icon>
+        <p>¡Éxito! Se han procesado <strong>{{rowsProcessed}}</strong> registros correctamente.</p>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-flat-button color="primary" [disabled]="isUploading || rowsProcessed === 0">
+        CONFIRMAR CARGA
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
