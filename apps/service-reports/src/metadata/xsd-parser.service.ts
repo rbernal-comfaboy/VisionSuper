@@ -13,10 +13,6 @@ export interface ColumnMetadata {
 export class XsdParserService {
   private readonly logger = new Logger(XsdParserService.name);
 
-  /**
-   * Parsea un archivo XSD y extrae la definición de las columnas
-   * @param xsdPath Ruta física del archivo XSD
-   */
   async parseXsd(xsdPath: string): Promise<ColumnMetadata[]> {
     try {
       const xsdContent = fs.readFileSync(xsdPath, 'utf8');
@@ -25,7 +21,8 @@ export class XsdParserService {
       const namespaces = { 'xs': 'http://www.w3.org/2001/XMLSchema' };
       const elements = xmlDoc.find('//xs:element', namespaces);
 
-      const metadata: ColumnMetadata[] = elements.map(el => {
+      const metadata: ColumnMetadata[] = elements.map(node => {
+        const el = node as libxml.Element;
         const name = el.attr('name')?.value();
         const type = el.attr('type')?.value();
         const minOccurs = el.attr('minOccurs')?.value();
@@ -49,23 +46,22 @@ export class XsdParserService {
     const restrictions: any = {};
     const namespaces = { 'xs': 'http://www.w3.org/2001/XMLSchema' };
     
-    // Buscar xs:simpleType dentro del elemento
-    const simpleType = element.get('.//xs:simpleType/xs:restriction', namespaces);
-    if (simpleType) {
+    const simpleTypeNode = element.get('.//xs:simpleType/xs:restriction', namespaces);
+    if (simpleTypeNode) {
+      const simpleType = simpleTypeNode as libxml.Element;
       const base = simpleType.attr('base')?.value();
       restrictions.base = base;
 
-      // Extraer facetas comunes
-      const maxLength = simpleType.get('./xs:maxLength', namespaces);
+      const maxLength = simpleType.get('./xs:maxLength', namespaces) as libxml.Element;
       if (maxLength) restrictions.maxLength = parseInt(maxLength.attr('value')?.value() || '0');
 
-      const pattern = simpleType.get('./xs:pattern', namespaces);
+      const pattern = simpleType.get('./xs:pattern', namespaces) as libxml.Element;
       if (pattern) restrictions.pattern = pattern.attr('value')?.value();
 
-      const totalDigits = simpleType.get('./xs:totalDigits', namespaces);
+      const totalDigits = simpleType.get('./xs:totalDigits', namespaces) as libxml.Element;
       if (totalDigits) restrictions.totalDigits = parseInt(totalDigits.attr('value')?.value() || '0');
 
-      const fractionDigits = simpleType.get('./xs:fractionDigits', namespaces);
+      const fractionDigits = simpleType.get('./xs:fractionDigits', namespaces) as libxml.Element;
       if (fractionDigits) restrictions.fractionDigits = parseInt(fractionDigits.attr('value')?.value() || '0');
     }
 

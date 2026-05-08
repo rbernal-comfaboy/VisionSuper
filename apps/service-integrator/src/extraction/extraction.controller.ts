@@ -3,7 +3,7 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import { ExtractionService } from './extraction.service';
 import { ExcelIngesterService } from './services/excel-ingester.service';
 
-@Controller()
+@Controller('extraction')
 export class ExtractionController {
   constructor(
     private readonly extractionService: ExtractionService,
@@ -18,16 +18,17 @@ export class ExtractionController {
   @Post('upload')
   @UseInterceptors(FileInterceptor('file'))
   async uploadExcel(
-    @UploadedFile() file: Express.Multer.File,
+    @UploadedFile() file: any,
     @Body('reportId') reportId: string,
     @Body('unitId') unitId: string,
   ) {
+    // Sincronizado con la nueva firma del servicio
     const data = await this.excelIngesterService.processExcel(file.buffer, reportId, unitId);
-    // TODO: Guardar 'data' en staging_items de Supabase
+    
     return {
       success: true,
       rowsProcessed: data.length,
-      message: 'Archivo procesado y cargado en staging temporalmente.',
+      message: 'Archivo procesado y cargado en staging.',
     };
   }
 

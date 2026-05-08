@@ -5,15 +5,13 @@ import * as ExcelJS from 'exceljs';
 export class ExcelIngesterService {
   private readonly logger = new Logger(ExcelIngesterService.name);
 
-  /**
-   * Procesa un archivo Excel cargado manualmente
-   * @param fileBuffer Buffer del archivo Excel
-   * @param mappingConfig Configuración de mapeo de columnas
-   */
-  async processExcel(fileBuffer: Buffer, mappingConfig: any): Promise<any[]> {
-    this.logger.log('Iniciando procesamiento de archivo Excel...');
+  async processExcel(fileBuffer: any, reportId: string, unitId: string): Promise<any[]> {
+    this.logger.log(`Procesando Excel para Reporte: ${reportId}, Unidad: ${unitId}`);
+    
     const workbook = new ExcelJS.Workbook();
-    await workbook.xlsx.load(fileBuffer);
+    // Asegurar que sea un Buffer compatible
+    const buffer = Buffer.isBuffer(fileBuffer) ? fileBuffer : Buffer.from(fileBuffer);
+    await workbook.xlsx.load(buffer);
     
     const worksheet = workbook.getWorksheet(1);
     const records = [];
@@ -22,17 +20,12 @@ export class ExcelIngesterService {
       throw new Error('No se encontró la hoja de trabajo en el Excel');
     }
 
-    // Recorrer filas (saltando el encabezado)
     worksheet.eachRow({ includeEmpty: false }, (row, rowNumber) => {
-      if (rowNumber === 1) return; // Saltar encabezado
-
-      const record: any = {};
-      // Lógica de mapeo dinámico según mappingConfig
-      // ...
+      if (rowNumber === 1) return;
+      const record: any = { reportId, unitId, data: row.values };
       records.push(record);
     });
 
-    this.logger.log(`Procesamiento completado. ${records.length} registros extraídos.`);
     return records;
   }
 }
