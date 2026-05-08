@@ -1,5 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
-import * as libxml from 'libxmljs2';
+import { DOMParser } from '@xmldom/xmldom';
+import * as xpath from 'xpath';
 import * as fs from 'fs';
 
 export interface ColumnMetadata {
@@ -16,53 +17,44 @@ export class XsdParserService {
   async parseXsd(xsdPath: string): Promise<ColumnMetadata[]> {
     try {
       const xsdContent = fs.readFileSync(xsdPath, 'utf8');
-      const xmlDoc = libxml.parseXml(xsdContent);
+      const doc = new DOMParser().parseFromString(xsdContent);
       
-      const namespaces = { 'xs': 'http://www.w3.org/2001/XMLSchema' };
-      const elements = xmlDoc.find('//xs:element', namespaces);
+      const select = xpath.useNamespaces({ 'xs': 'http://www.w3.org/2001/XMLSchema' });
+      const elementNodes = select('//xs:element', doc) as Element[];
 
-      const metadata: ColumnMetadata[] = elements.map(node => {
-        const el = node as libxml.Element;
-        const name = el.attr('name')?.value();
-        const type = el.attr('type')?.value();
-        const minOccurs = el.attr('minOccurs')?.value();
+      const metadata: ColumnMetadata[] = elementNodes.map(node => {
+        const name = node.getAttribute('name');
+        const type = node.getAttribute('type');
+        const minOccurs = node.getAttribute('minOccurs');
 
         return {
           name: name || 'unknown',
           type: type || 'xs:string',
           required: minOccurs !== '0',
-          restrictions: this.extractRestrictions(el)
+          restrictions: this.extractRestrictions(node, select)
         };
       });
 
       return metadata.filter(m => m.name !== 'unknown');
     } catch (error) {
-      this.logger.error(`Error parseando XSD: ${xsdPath}`, error.stack);
+      this.logger.error(`Error parseando XSD (JS Mode): ${xsdPath}`, error.stack);
       throw error;
     }
   }
 
-  private extractRestrictions(element: libxml.Element): any {
+  private extractRestrictions(node: Element, select: xpath.XPathSelect): any {
     const restrictions: any = {};
-    const namespaces = { 'xs': 'http://www.w3.org/2001/XMLSchema' };
-    
-    const simpleTypeNode = element.get('.//xs:simpleType/xs:restriction', namespaces);
-    if (simpleTypeNode) {
-      const simpleType = simpleTypeNode as libxml.Element;
-      const base = simpleType.attr('base')?.value();
-      restrictions.base = base;
+    const restrictionNode = select('.//xs:restriction', node) as Element[];
 
-      const maxLength = simpleType.get('./xs:maxLength', namespaces) as libxml.Element;
-      if (maxLength) restrictions.maxLength = parseInt(maxLength.attr('value')?.value() || '0');
+    if (restrictionNode.length > 0) {
+      const res = restrictionNode[0];
+      restrictions.base = res.getAttribute('base');
 
-      const pattern = simpleType.get('./xs:pattern', namespaces) as libxml.Element;
-      if (pattern) restrictions.pattern = pattern.attr('value')?.value();
+      const maxLength = select('./xs:maxLength/@value', res, true) as Attr;
+      if (maxLength) restrictions.maxLength = parseInt(maxLength.value);
 
-      const totalDigits = simpleType.get('./xs:totalDigits', namespaces) as libxml.Element;
-      if (totalDigits) restrictions.totalDigits = parseInt(totalDigits.attr('value')?.value() || '0');
-
-      const fractionDigits = simpleType.get('./xs:fractionDigits', namespaces) as libxml.Element;
-      if (fractionDigits) restrictions.fractionDigits = parseInt(fractionDigits.attr('value')?.value() || '0');
+      const pattern = select('./xs:pattern/@value', res, true) as Attr;
+      if (pattern) restrictions.pattern = pattern.value;
     }
 
     return restrictions;
