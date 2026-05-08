@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="COBERTURA_EJECUCION_ESTUDIANTE_PROGRAMA_JORNADA_ESCOLAR_COMPLEMENTARIA_2017C01" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="COBERTURA_EJECUCION_ESTUDIANTE_PROGRAMA_JORNADA_ESCOLAR_COMPLEMENTARIA_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_COBERTURA_EJECUCION_ESTUDIANTE_PROGRAMA_JORNADA_ESCOLAR_COMPLEMENTARIA_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIP_DE_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TIP_IDENTIFICACION_ESTUDIANTE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_IDENTIFICACION_ESTUDIANTE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PRI_NOMBRE_ESTUDIANTE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEG_NOMBRE_ESTUDIANTE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PRI_APELLIDO_ESTUDIANTE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEG_APELLIDO_ESTUDIANTE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="GENERO_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_NACIMIENTO_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PAI_NACIMIENTO_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="3"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_DEPARTAMENTO_NACIMIENTO_DANE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_MUNICIPIO_NACIMIENTO_DANE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_MUNICIPIO_RESIDENCIA_DANE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_ZONA_UBICACION_RESIDENCIA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="DIR_RESIDENCIA_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="MOD_JEC"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_INFRAESTRUCTURA_CCF"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_COLEGIO_ESTUDIANTE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEDE_ESTABLECIMIENTO_EDUCATIVO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NIVEL_ESCOLARIDAD"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="GRADO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="ARE_GEOGRAFICA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TIP_SECTOR"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TIP_JORNADA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_GRUPO_ETNICO_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_RESGUARDO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_PUB_INDIGENA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_FACTOR_VULNERABILIDAD"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

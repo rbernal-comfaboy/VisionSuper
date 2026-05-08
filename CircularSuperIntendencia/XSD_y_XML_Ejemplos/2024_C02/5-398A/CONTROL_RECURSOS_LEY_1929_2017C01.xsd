@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CONTROL_RECURSOS_LEY_1929_2017C01" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="CONTROL_RECURSOS_LEY_1929_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_CONTROL_RECURSOS_LEY_1929_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NUM_ACTA_LEY1929"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_ACTA_LEY1929"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="DESTINACION_RECURSOS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="APROPIACION_LE1636"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SALDO_RECURSOS_LEY1780"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_APROPIACION_LEY1636"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SALDO_FOSFEC"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PORC_APROPIACION_LEY1929_40"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="VAL_RECURSOS_LEY1929_40"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PORC_APROPIACION_LEY1929_10"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="VALOR_PASIVO_RECONOCIDO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="VAL_DESTINADO_EPS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_RECURSOS_LEY1929"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="REN_FINANCIEROS_PASIVOS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="REN_FINANCIEROS_EPS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="REN_FINANCIEROS_LEY1929_10"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

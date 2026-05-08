@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EJECUCION_RECURSOS_FOME_2020C13" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="EJECUCION_RECURSOS_FOME_2020C13" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_EJECUCION_RECURSOS_FOME_2020C13">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIPO_CAJA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="CODIGO_CONCEPTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="VAL_EJECUCION_MES"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

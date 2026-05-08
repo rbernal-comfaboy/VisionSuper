@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IDENTIFICACION_TALENTO_HUMANO_2023C02" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="IDENTIFICACION_TALENTO_HUMANO_2023C02" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_IDENTIFICACION_TALENTO_HUMANO_2023C02">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIPO_DOCUMENTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_IDENTIFICACION"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="16"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PRIMER_APELLIDO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEGUNDO_APELLIDO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PRIMER_NOMBRE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEGUNDO_NOMBRE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_MUNICIPIO_RESIDENCIA_DANE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TELEFONO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="20"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="CORREO_ELECTRONICO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_NACIMIENTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEXO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="ETNIAS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_DEPARTAMENTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_MUNICIPIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_ZONA_UBICACION_RESIDENCIA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TIP_SECTOR"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="OTR_SECTOR"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_NIVEL_CARGO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NOM_CARGO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TIEMPO_EXPERIENCIA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NIVEL_FORMACION"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="ULT_TITULO_OBTENIDO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="200"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="EST_AGENTE_PROGRAMA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="MOTIVO_RETIRO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_SERVICIO_AIPI"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

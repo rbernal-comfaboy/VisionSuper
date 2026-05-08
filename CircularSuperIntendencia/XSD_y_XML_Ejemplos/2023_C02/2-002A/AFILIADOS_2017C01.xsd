@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AFILIADOS_2017C01" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="AFILIADOS_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_AFILIADOS_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIP_IDENTIFICACION_EMPRESA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_IDENTIFICACION_EMPRESA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="16"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TIP_IDENTIFICACION_AFILIADO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_IDENTIFICACION_AFILIADO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PRI_NOMBRE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEG_NOMBRE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PRI_APELLIDO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEG_APELLIDO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_NACIMIENTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="GENERO_CCF"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="ORI_SEXUAL"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NIVEL_ESCOLARIDAD"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_OCUPACION_DANE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FACTOR_VULNERABILIDAD"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="ESTADO_CIVIL"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PERTENENCIA_ETNICA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_RESGUARDO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_PUB_INDIGENA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PAIS_RESIDENCIA_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="3"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_MUNICIPIO_DANE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="ARE_GEOGRAFICA_RESIDENCIA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_MUNICIPIO_LABOR_DANE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="AREA_GEOGRAFICA_LABOR"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SAL_BASICO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TIP_AFILIADO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="CATEGORIA_CCF"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="BEN_CUOTA_MONETARIA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="ACT_ECONOMICA_PRINCIPAL"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="4"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="INFO_MICRODATO_AUXILIO_ECONOMICO_2020C13" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="INFO_MICRODATO_AUXILIO_ECONOMICO_2020C13" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_INFO_MICRODATO_AUXILIO_ECONOMICO_2020C13">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_TIPO_IDENTIFICACION_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_IDENTIFICACION_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PRI_NOMBRE_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEG_NOMBRE_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PRI_APELLIDO_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="SEG_APELLIDO_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="GENERO_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_NACIMIENTO_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_MUNICIPIO_RESIDENCIA_DANE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_ZONA_UBICACION_RESIDENCIA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="DIR_RESIDENCIA_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_GRUPO_ETNICO_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_CARACTERISTICA_POBLACION"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_FACTOR_VULNERABILIDAD"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_PERDIDA_EMPLEO_POSTULANTE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="CAT_AFILIADO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_RADICACION_SOLICITUD_BENEFICIARIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_APROBACION_BENEFICIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_LIQUIDACION_BENEFICIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_BENEFICIOS_LIQUIDADOS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_REPORTE"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

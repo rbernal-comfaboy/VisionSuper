@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PROYECTOS_CONSTITUCION_AMPLIACION_FONDOS_CREDITO_2020C08" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="PROYECTOS_CONSTITUCION_AMPLIACION_FONDOS_CREDITO_2020C08" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_PROYECTOS_CONSTITUCION_AMPLIACION_FONDOS_CREDITO_2020C08">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_PROYECTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="MODALIDAD_CREDITO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_CATEGORIA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TASA_INTERES_MINIMA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TASA_INTERES_MAXIMA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="CANT_CREDITOS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="10"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="VAL_MONTO_CREDITOS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PLAZO_CREDITO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="PORCENTAJE_SUBSIDIO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

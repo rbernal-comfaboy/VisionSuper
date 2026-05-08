@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PRINCIPAL_PROYECTOS_FOVIS_2020C08" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="PRINCIPAL_PROYECTOS_FOVIS_2020C08" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_PRINCIPAL_PROYECTOS_FOVIS_2020C08">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_PROYECTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="VAL_TOTAL_PROYECTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="MODALIDAD_FOVIS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="DESCRIPCION_PROYECTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="4000"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="OBJETIVO_PROYECTO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="4000"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="JUSTIFICACION"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="4000"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="APROBACION"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_ACTA_AEI"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="10"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FECHA_APR_AEI"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_CONSEJEROS"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="TMP_REINTEGRO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="3"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="ESTUDIO_MERCADO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="4000"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="EVALUACION_SOCIAL"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="4000"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="EVALUACION_FINANCIERA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="4000"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_PERSONAS_REFERENCIA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="10"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="NUM_POBLACION_AFECTADA"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="10"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FECHA_DESEMBOLSO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="FEC_REINTEGRO"   minOccurs="1" >
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

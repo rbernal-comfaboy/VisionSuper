@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="INFORMACION_SEMESTRAL_CONSOLIDADO_RECURSOS_EJECUTADOS_FONINEZ_AIPI_2025C02">
+	<xs:element name="INFORMACION_SEMESTRAL_CONSOLIDADO_RECURSOS_EJECUTADOS_FONINEZ_AIPI_2025C02" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_INFORMACION_SEMESTRAL_CONSOLIDADO_RECURSOS_EJECUTADOS_FONINEZ_AIPI_2025C02">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_MUNICIPIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_SERVICIO_AIPI" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="VALOR_EJECUTADO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

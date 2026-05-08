@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CREDITO_SOCIAL_2017C01" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="CREDITO_SOCIAL_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_CREDITO_SOCIAL_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="VAL_FONDO_ORIGEN"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="18"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="VAL_FONDO_OTRASFUENTES"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="18"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="MOD_CREDITO"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="1"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="CAT_AFILIADO"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="2"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="TAS_INTERES"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:string">
+<xs:maxLength value="5"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="GENERO_CCF"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="1"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="CAN_CREDITOS"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="10"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="VAL_MONTO_CREDITOS"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="18"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="DIRECTIVOS_2023C02">
+	<xs:element name="DIRECTIVOS_2023C02" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_DIRECTIVOS_2023C02">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ROL" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NIT" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PER_JURIDICA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="200"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="TIP_IDENTIFICACION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_IDENTIFICACION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="16"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="LUGAR_EXPEDICION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PRIMER_NOMBRE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SEGUNDO_NOMBRE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PRIMER_APELLIDO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SEGUNDO_APELLIDO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="TELEFONO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="20"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="TELEFONO_CELULAR" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="17"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="CORREO_ELECTRONICO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="DIRECCION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_MUNICIPIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PERIODO_INICIAL" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PERIODO_FINAL" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_RESOLUCION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="CONFORMACION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="RENGLON" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="REPRESENTACION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="AUT_NOTIF_ELECTRONICA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="CORREO_NOTIF" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

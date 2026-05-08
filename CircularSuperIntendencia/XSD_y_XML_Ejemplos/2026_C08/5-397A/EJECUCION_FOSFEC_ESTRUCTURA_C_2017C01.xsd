@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="EJECUCION_FOSFEC_ESTRUCTURA_C_2017C01">
+	<xs:element name="EJECUCION_FOSFEC_ESTRUCTURA_C_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_EJECUCION_FOSFEC_ESTRUCTURA_C_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIP_CAJA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="COD_CONCEPTO_FOSFEC_EST_C" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="CAN_MES" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="10"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

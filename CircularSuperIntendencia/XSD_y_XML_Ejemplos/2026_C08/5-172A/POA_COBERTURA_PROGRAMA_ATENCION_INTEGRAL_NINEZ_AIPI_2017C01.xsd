@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="POA_COBERTURA_PROGRAMA_ATENCION_INTEGRAL_NINEZ_AIPI_2017C01">
+	<xs:element name="POA_COBERTURA_PROGRAMA_ATENCION_INTEGRAL_NINEZ_AIPI_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_POA_COBERTURA_PROGRAMA_ATENCION_INTEGRAL_NINEZ_AIPI_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_DEPARTAMENTO_SERVICIO_DANE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_MUNICIPIO_SERVICIO_DANE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_MIN_EDUCACION_ESTABLECIMIENTO_EDUCATIVO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_SEDE_ESTABLECIMIENTO_EDUCATIVO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_SERVICIO_AIPI" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="POB_BENEFICIARIA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="10"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

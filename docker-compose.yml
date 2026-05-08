@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  # --- INFRAESTRUCTURA DE DATOS (SUPABASE SELF-HOSTED) ---
+  # Nota: En producción se recomienda usar el repositorio oficial de supabase/docker
+  db:
+    image: postgres:15-alpine
+    container_name: visor-super-db
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./supabase/data:/var/lib/postgresql/data
+    networks:
+      - internal-net
+
+  # --- FRONTEND (ANGULAR) ---
+  web-angular:
+    build:
+      context: ./apps/web-angular
+      dockerfile: Dockerfile
+    container_name: visor-super-web
+    depends_on:
+      - service-reports
+    networks:
+      - internal-net
+      - proxy-net
+
+  # --- MIDDLEWARE: INTEGRACIÓN INFORMIX ---
+  service-integrator:
+    build:
+      context: ./apps/service-integrator
+      dockerfile: Dockerfile
+    container_name: visor-super-integrator
+    environment:
+      - INFORMIX_URL=${INFORMIX_URL}
+      - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD}@db:5432/postgres
+    depends_on:
+      - db
+    networks:
+      - internal-net
+
+  # --- MIDDLEWARE: LÓGICA DE REPORTES XML/XSD ---
+  service-reports:
+    build:
+      context: ./apps/service-reports
+      dockerfile: Dockerfile
+    container_name: visor-super-reports
+    environment:
+      - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD}@db:5432/postgres
+    depends_on:
+      - db
+    networks:
+      - internal-net
+
+  # --- GATEWAY / PROXY ---
+  api-gateway:
+    image: nginx:alpine
+    container_name: visor-super-gateway
+    volumes:
+      - ./apps/api-gateway/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - web-angular
+      - service-reports
+    networks:
+      - proxy-net
+
+networks:
+  internal-net:
+    driver: bridge
+  proxy-net:
+    driver: bridge
