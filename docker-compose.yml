@@ -16,8 +16,8 @@ services:
   # --- FRONTEND (ANGULAR) ---
   web-angular:
     build:
-      context: ./apps/web-angular
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: apps/web-angular/Dockerfile
     container_name: visor-super-web
     depends_on:
       - service-reports
@@ -28,8 +28,8 @@ services:
   # --- MIDDLEWARE: INTEGRACIÓN INFORMIX ---
   service-integrator:
     build:
-      context: ./apps/service-integrator
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: apps/service-integrator/Dockerfile
     container_name: visor-super-integrator
     environment:
       - INFORMIX_URL=${INFORMIX_URL}
@@ -42,8 +42,8 @@ services:
   # --- MIDDLEWARE: LÓGICA DE REPORTES XML/XSD ---
   service-reports:
     build:
-      context: ./apps/service-reports
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: apps/service-reports/Dockerfile
     container_name: visor-super-reports
     environment:
       - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD}@db:5432/postgres
