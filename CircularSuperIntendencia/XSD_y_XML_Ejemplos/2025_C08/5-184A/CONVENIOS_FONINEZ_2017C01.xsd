@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="CONVENIOS_FONINEZ_2017C01">
+	<xs:element name="CONVENIOS_FONINEZ_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_CONVENIOS_FONINEZ_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IDE_DEL_PROGRAMA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="IDE_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="OBJ_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="500"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NOM_ENTIDAD_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="200"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_MUNICIPIO_DANE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="VAL_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="VALOR_DESEMBOLSO_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="VAL_APORTES" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="APO_CCF" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="APO_ENTIDAD_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="EST_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="FEC_INICIO_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="FEC_FINALIZACION_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="VAL_EJECUCION_CONVENIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

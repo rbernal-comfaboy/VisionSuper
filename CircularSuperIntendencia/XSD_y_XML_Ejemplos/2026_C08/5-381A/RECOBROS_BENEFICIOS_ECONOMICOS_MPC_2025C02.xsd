@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="RECOBROS_BENEFICIOS_ECONOMICOS_MPC_2025C02">
+	<xs:element name="RECOBROS_BENEFICIOS_ECONOMICOS_MPC_2025C02" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_RECOBROS_BENEFICIOS_ECONOMICOS_MPC_2025C02">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_TIPO_IDENTIFICACION_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_IDENTIFICA_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="16"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PRI_NOMBRE_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SEG_NOMBRE_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PRI_APELLIDO_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SEG_APELLIDO_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="CONCEPTO_RECOBRO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="VALOR_ADECUADO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="FEC_PERIODO_RECOBRAR" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="GESTION_REALIZADA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="FEC_GESTION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="VALOR_RECUPERADO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SALDO_POR_COBRAR" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

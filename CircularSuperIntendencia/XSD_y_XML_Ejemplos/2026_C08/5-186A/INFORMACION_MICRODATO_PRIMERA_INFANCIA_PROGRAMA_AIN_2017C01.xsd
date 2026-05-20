@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="INFORMACION_MICRODATO_PRIMERA_INFANCIA_PROGRAMA_AIN_2017C01">
+	<xs:element name="INFORMACION_MICRODATO_PRIMERA_INFANCIA_PROGRAMA_AIN_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_INFORMACION_MICRODATO_PRIMERA_INFANCIA_PROGRAMA_AIN_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIP_DE_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="TIP_IDENTIFICACION_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_IDENTIFICACION_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PRI_NOMBRE_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SEG_NOMBRE_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PRI_APELLIDO_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SEG_APELLIDO_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="GENERO_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="FEC_NACIMIENTO_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PAI_NACIMIENTO_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="3"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_DEPARTAMENTO_NACIMIENTO_DANE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_MUNICIPIO_NACIMIENTO_DANE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_DEPARTAMENTO_RESIDENCIA_DANE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_MUNICIPIO_RESIDENCIA_DANE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_ZONA_UBICACION_RESIDENCIA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="DIR_RESIDENCIA_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="CODIGO_DANE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="FEC_VINCULACION_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="8"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="GRUPO_ETNICO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_RESGUARDO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_PUB_INDIGENA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_FACTOR_VULNERABILIDAD" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="RESP_BENEFICIARIO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="TIP_IDENTIFICACION_MADRE_PADRE_ACUDIENTE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_IDENTIFICACION_MADRE_PADRE_ACUDIENTE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PRI_NOMBRE_MADRE_PADRE_ACUDIENTE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SEG_NOMBRE_MADRE_PADRE_ACUDIENTE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="PRI_APELLIDO_MADRE_PADRE_ACUDIENTE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SEG_APELLIDO_MADRE_PADRE_ACUDIENTE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="TEL_MADRE_PADRE_ACUDIENTE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_SERVICIO_AIPI" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_DE_LA_INFRAESTRUCTURA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_DADO_MINISTERIO_EDUCACION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

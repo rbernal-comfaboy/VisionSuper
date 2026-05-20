@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="DISPONIBILIDAD_RECURSOS_LIMITE_MAXIMO_MONTO_ANUAL_INVERSIONES_2017C01">
+	<xs:element name="DISPONIBILIDAD_RECURSOS_LIMITE_MAXIMO_MONTO_ANUAL_INVERSIONES_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_DISPONIBILIDAD_RECURSOS_LIMITE_MAXIMO_MONTO_ANUAL_INVERSIONES_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ANIO_EJECUCION" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="4"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="CEN_COSTOS" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="SUB_CENTRO_COSTOS" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="2"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="COD_PROYECTO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NOM_PROYECTO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="200"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NOM_ENTIDAD_RECEPTORA" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_TITULO_VALOR" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+							<xs:element name="MON_DISPONIBLE" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="18"/>
+							</xs:restriction></xs:simpleType>
+</xs:element>
+</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

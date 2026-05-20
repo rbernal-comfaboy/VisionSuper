@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="SALDO_MICROCREDITOS_EMPRENDIMIENTO_FOSFEC_2017C01">
+	<xs:element name="SALDO_MICROCREDITOS_EMPRENDIMIENTO_FOSFEC_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_SALDO_MICROCREDITOS_EMPRENDIMIENTO_FOSFEC_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CON_MICROCREDITO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="1"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+							<xs:element name="VAL_MICROCREDITO" minOccurs="1">
+							<xs:simpleType><xs:restriction base="xs:integer">
+							<xs:totalDigits value="18"/>
+							</xs:restriction> </xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PQRS_2017C01" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="PQRS_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_PQRS_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_TIPOLOGIA_MODALIDAD"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="2"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="MES_PETICIONES"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="2"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_PETICIONES"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="10"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="CAN_ENCUESTAS"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="10"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_ENCUESTAS_SATISFACTORIAS"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="10"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

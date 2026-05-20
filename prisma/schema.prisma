@@ -1,0 +1,115 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           Int            @id @default(autoincrement())
+  email        String         @unique
+  passwordHash String
+  name         String
+  role         String         // "ADMIN", "ANALYST", "APPROVER"
+  areaId       Int?
+  area         Area?          @relation(fields: [areaId], references: [id])
+  approvals    Approval[]
+  comments     Comment[]
+  notifications Notification[]
+}
+
+model Area {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique // e.g., "Financiera", "Aportes", "Proyectos", "Seguridad"
+  users    User[]
+  reports  Report[]
+}
+
+model Connection {
+  id         Int             @id @default(autoincrement())
+  name       String
+  engine     String          // "SQLSERVER", "POSTGRESQL", "SQLITE", "MOCK"
+  host       String?
+  port       Int?
+  username   String?
+  password   String?
+  database   String?
+  isMock     Boolean         @default(true)
+  mappings   ReportMapping[]
+  dataSources DataSource[]
+}
+
+model DataSource {
+  id             Int             @id @default(autoincrement())
+  name           String
+  description    String?
+  connectionId   Int
+  connection     Connection      @relation(fields: [connectionId], references: [id], onDelete: Cascade)
+  baseConfigJson String          @default("{}") // e.g., { type: "TABLE", queryOrTable: "dbo.core_empresas" }
+  fieldsJson     String          @default("[]") // JSON representing dimensions, measures, formulas
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  mappings       ReportMapping[]
+}
+
+model ReportMapping {
+  id            Int         @id @default(autoincrement())
+  name          String
+  reportCode    String      // "2-001A", "2-002A"
+  sqlQuery      String?
+  connectionId  Int?
+  connection    Connection? @relation(fields: [connectionId], references: [id])
+  dataSourceId  Int?
+  dataSource    DataSource? @relation(fields: [dataSourceId], references: [id])
+  fieldMappings String      // JSON string representing { "XSD_TAG": "SQL_COLUMN" }
+  reports       Report[]
+}
+
+model Report {
+  id           Int            @id @default(autoincrement())
+  reportCode   String         // "2-001A", "2-002A"
+  mappingId    Int?
+  mapping      ReportMapping? @relation(fields: [mappingId], references: [id])
+  status       String         // "DRAFT", "PENDING_APPROVAL", "APPROVED", "REJECTED"
+  dataJson     String         // Full extracted and edited rows as JSON string
+  areaId       Int
+  area         Area           @relation(fields: [areaId], references: [id])
+  creatorId    Int
+  creatorName  String
+  generatedXml String?        // Stores the generated XML text once approved
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  approvals    Approval[]
+  comments     Comment[]
+}
+
+model Approval {
+  id         Int      @id @default(autoincrement())
+  reportId   Int
+  report     Report   @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  userId     Int
+  user       User     @relation(fields: [userId], references: [id])
+  approvedAt DateTime @default(now())
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  reportId  Int
+  report    Report   @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  content   String
+  createdAt DateTime @default(now())
+}
+
+model Notification {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  content   String
+  type      String   // "INFO", "ALERT", "SUCCESS", "REJECTION"
+  isRead    Boolean  @default(false)
+  link      String?
+  createdAt DateTime @default(now())
+}

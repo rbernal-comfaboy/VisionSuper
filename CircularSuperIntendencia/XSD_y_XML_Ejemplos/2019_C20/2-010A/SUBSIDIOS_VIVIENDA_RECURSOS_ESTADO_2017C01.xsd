@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SUBSIDIOS_VIVIENDA_RECURSOS_ESTADO_2017C01" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="SUBSIDIOS_VIVIENDA_RECURSOS_ESTADO_2017C01" msdata:IsDataSet="true" msdata:Locale="en-US">
+		<xs:complexType>
+			<xs:choice minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="T_SUBSIDIOS_VIVIENDA_RECURSOS_ESTADO_2017C01">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_PROGRMAS_SOLUCIONES"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="2"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="TIP_RECURSO"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="2"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_SUBSIDIOS_ASIGNADOS"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="10"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="VAL_SUBSIDIOS_ASIGNADOS"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="15"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="NUM_SUBSIDIOS_PAGADOS"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="10"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+							<xs:element name="VAL_SUBSIDIOS_PAGADOS"   minOccurs="1" >
+<xs:simpleType><xs:restriction base="xs:integer">
+<xs:totalDigits value="15"/>
+</xs:restriction> </xs:simpleType>
+</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				 </xs:element>
+			 </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
