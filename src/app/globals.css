@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc; /* slate-50 */
+  --foreground: #0f172a; /* slate-900 */
+  
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(15, 23, 42, 0.08);
+  
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --header-border: rgba(15, 23, 42, 0.06);
+  
+  --sidebar-bg: #090d16; /* high contrast premium dark sidebar always */
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  
+  --text-muted: #475569; /* slate-600 */
+  --bg-hover: rgba(15, 23, 42, 0.03);
+  --bg-inner: #f1f5f9; /* slate-100 */
+}
+
+.dark {
+  --background: #020617; /* slate-950 */
+  --foreground: #f1f5f9; /* slate-100 */
+  
+  --card-bg: rgba(15, 23, 42, 0.4);
+  --card-border: rgba(255, 255, 255, 0.08);
+  
+  --header-bg: rgba(2, 6, 23, 0.2);
+  --header-border: rgba(255, 255, 255, 0.05);
+  
+  --sidebar-bg: #020617;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  
+  --text-muted: #94a3b8; /* slate-400 */
+  --bg-hover: rgba(255, 255, 255, 0.05);
+  --bg-inner: rgba(255, 255, 255, 0.03);
+}
+
+@theme inline {
+  --color-bg-main: var(--background);
+  --color-text-main: var(--foreground);
+  --color-card-main: var(--card-bg);
+  --color-border-main: var(--card-border);
+  --color-header-main: var(--header-bg);
+  --color-border-header: var(--header-border);
+  --color-sidebar-main: var(--sidebar-bg);
+  --color-border-sidebar: var(--sidebar-border);
+  --color-text-muted: var(--text-muted);
+  --color-bg-hover: var(--bg-hover);
+  --color-bg-inner: var(--bg-inner);
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
