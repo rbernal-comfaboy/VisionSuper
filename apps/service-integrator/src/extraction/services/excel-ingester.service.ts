@@ -9,9 +9,9 @@ export class ExcelIngesterService {
     this.logger.log(`Procesando Excel para Reporte: ${reportId}, Unidad: ${unitId}`);
     
     const workbook = new ExcelJS.Workbook();
-    // Asegurar que sea un Buffer compatible
+    // Asegurar que sea un Buffer compatible y usar casting a any para evitar error de TS
     const buffer = Buffer.isBuffer(fileBuffer) ? fileBuffer : Buffer.from(fileBuffer);
-    await workbook.xlsx.load(buffer);
+    await workbook.xlsx.load(buffer as any);
     
     const worksheet = workbook.getWorksheet(1);
     const records = [];
